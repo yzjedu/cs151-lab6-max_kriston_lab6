@@ -5,17 +5,20 @@ parameter: none
 return: whole program
 
 Function name: deposit_func
-parameter: integer
-return:
+parameter: none
+return:new balance
 
-Function name: view function
+Function name: view_function
+parameter: none
+return: new balance
 
-function: withdraw function
+function: withdraw_function
+parameter: none
+return: balance
 
-function_name: error function
-
-function name: 
-
+function: exit_function
+parameter: none
+return: end function
 
 
 
@@ -30,14 +33,11 @@ function name:
     - `SENTINEL = 'E'` (to exit the loop)
     - `choice = ''` (to store user’s menu choice)
 
-3. Start a while loop that continues until the user enters 'E' to exit:
-   1. Display the menu options:
-       - `D - Deposit`
-       - `W - Withdraw`
-       - `V - View Balance`
-       - `E - Exit`
-   2. Prompt the user to input their choice and convert it to uppercase.
-   3. If the choice is 'D' (Deposit):
+
+- Function name: deposit_func
+- parameter: none
+- return:new balance
+  3. If the choice is 'D' (Deposit):
        1. Prompt the user to enter the amount to deposit.
        2. Check if the deposit amount is a valid positive integer:
             1. Convert the input to an integer.
@@ -45,10 +45,17 @@ function name:
             1. Display the new balance to the user.
        3. otherwise:
              1. Output an error message requesting a valid positive number.
-   4. Else if the choice is 'V' (View Balance):
+
+- Function name: view_function
+- parameter: none
+- return: new balance 
+  4. if the choice is 'V' (View Balance):
       1. Output the current balance to the user.
 
-   5. Else if the choice is 'W' (Withdraw):
+- function: withdraw_function
+- parameter: none
+- return: balance
+   5. if the choice is 'W' (Withdraw):
        1. Prompt the user to enter the amount to withdraw.
        2. Check if the withdrawal amount is a valid positive integer:
             1. Convert the input to an integer.
@@ -58,11 +65,25 @@ function name:
                  1.  Output a warning message indicating that the user will be charged 5% interest.
           3. otherwise:
              1. Output an error message requesting a valid positive number.
-             
-   6. Else if the choice is 'E' (Exit):
+
+- function: exit_function
+- parameter: none
+- return: end function             
+   6. if the choice is 'E' (Exit):
        - Output a message thanking the user and indicate the program is ending.
 
    7. Otherwise, if the choice is not one of the valid options:
        - Output an error message requesting a valid option (D, W, V, or E).
 
-4. Output a message indicating the ATM program has ended.
+8. Output a message indicating the ATM program has ended.
+
+- function name: atm_main
+- parameter: none
+- return: program
+9. Start a while loop that continues until the user enters 'E' to exit:
+   1. Display the menu options:
+       - `D - Deposit`
+       - `W - Withdraw`
+       - `V - View Balance`
+       - `E - Exit`
+   2. Prompt the user to input their choice and convert it to uppercase.
